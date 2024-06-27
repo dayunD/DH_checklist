@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>디지털헬스 체크시트</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        text-align: center;
+    }
+    #container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #logo {
+        width: 80px;
+        height: auto;
+    }
+    #questions-table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #questions-table th, #questions-table td {
+        padding: 10px;
+    }
+    #questions-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    #questions-table tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    #questions-table th {
+        background-color: #ccc;
+    }
+    #result {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <div id="header">
+        <div><디지털헬스></div>
+        <img id="logo" src="에이블 로고.png" alt="에이블로고">
+    </div>
+
+    <h1>자율신경의 균형을 측정하는 체크시트</h1>
+    <br>
+    <br>
+    <br>
+
+    <table id="questions-table">
+        <tr>
+            <th>질문</th>
+            <th>A</th>
+            <th>B</th>
+        </tr>
+        <tr>
+            <td>아침에 눈 뜨기</td>
+            <td><label><input type="radio" name="question1" value="A"> 좋다</label></td>
+            <td><label><input type="radio" name="question1" value="B"> 나쁘다</label></td>
+        </tr>
+        <tr>
+            <td>수면시간</td>
+            <td><label><input type="radio" name="question2" value="A"> 6시간 미만</label></td>
+            <td><label><input type="radio" name="question2" value="B"> 6시간 이상</label></td>
+        </tr>
+        <tr>
+            <td>잠들기</td>
+            <td><label><input type="radio" name="question3" value="A"> 나쁘다</label></td>
+            <td><label><input type="radio" name="question3" value="B"> 좋다</label></td>
+        </tr>
+        <tr>
+            <td>앉았다 일어날때 현기증 및 어지럼증</td>
+            <td><label><input type="radio" name="question4" value="A"> 거의 없다</label></td>
+            <td><label><input type="radio" name="question4" value="B"> 자주 있다</label></td>
+        </tr>
+        <tr>
+            <td>위통 및 속 쓰림</td>
+            <td><label><input type="radio" name="question5" value="A"> 자주 있다</label></td>
+            <td><label><input type="radio" name="question5" value="B"> 별로 없다</label></td>
+        </tr>
+        <tr>
+            <td>두통 및 어깨 결림</td>
+            <td><label><input type="radio" name="question6" value="A"> 자주 있다</label></td>
+            <td><label><input type="radio" name="question6" value="B"> 별로 없다</label></td>
+        </tr>
+        <tr>
+            <td>일주일에 두 번 이상 운동</td>
+            <td><label><input type="radio" name="question7" value="A"> 안 한다</label></td>
+            <td><label><input type="radio" name="question7" value="B"> 한다</label></td>
+        </tr>
+        <tr>
+            <td>식생활은</td>
+            <td><label><input type="radio" name="question8" value="A"> 육류 위주</label></td>
+            <td><label><input type="radio" name="question8" value="B"> 야채 위주</label></td>
+        </tr>
+        <tr>
+            <td>손발이</td>
+            <td><label><input type="radio" name="question9" value="A"> 차다</label></td>
+            <td><label><input type="radio" name="question9" value="B"> 따뜻하다</label></td>
+        </tr>
+        <tr>
+            <td>배변은</td>
+            <td><label><input type="radio" name="question10" value="A"> 변비 기미</label></td>
+            <td><label><input type="radio" name="question10" value="B"> 설사 기미</label></td>
+        </tr>
+        <tr>
+            <td>혈압</td>
+            <td><label><input type="radio" name="question11" value="A"> 높은 편</label></td>
+            <td><label><input type="radio" name="question11" value="B"> 낮은 편</label></td>
+        </tr>
+        <tr>
+            <td>감기에</td>
+            <td><label><input type="radio" name="question12" value="A"> 잘 걸린다</label></td>
+            <td><label><input type="radio" name="question12" value="B"> 잘 안 걸린다</label></td>
+        </tr>
+        <tr>
+            <td>담배는</td>
+            <td><label><input type="radio" name="question13" value="A"> 피운다</label></td>
+            <td><label><input type="radio" name="question13" value="B"> 피우지 않는다</label></td>
+        </tr>
+        <tr>
+            <td>체형</td>
+            <td><label><input type="radio" name="question14" value="A"> 마른 편</label></td>
+            <td><label><input type="radio" name="question14" value="B"> 찐 편</label></td>
+        </tr>
+        <tr>
+            <td>피부 거칠음, 피부 트러블</td>
+            <td><label><input type="radio" name="question15" value="A"> 잘 생긴다</label></td>
+            <td><label><input type="radio" name="question15" value="B"> 잘 안 생긴다</label></td>
+        </tr>
+        <tr>
+            <td>꽃가루알레르기 및 알레르기</td>
+            <td><label><input type="radio" name="question16" value="A"> 없다</label></td>
+            <td><label><input type="radio" name="question16" value="B"> 있다</label></td>
+        </tr>
+        <tr>
+            <td>취미가</td>
+            <td><label><input type="radio" name="question17" value="A"> 없다</label></td>
+            <td><label><input type="radio" name="question17" value="B"> 있다</label></td>
+        </tr>
+        <tr>
+            <td>성격은</td>
+            <td><label><input type="radio" name="question18" value="A"> 활동적</label></td>
+            <td><label><input type="radio" name="question18" value="B"> 태평한 편</label></td>
+        </tr>
+        <tr>
+            <td>긴장</td>
+            <td><label><input type="radio" name="question19" value="A"> 잘 한다</label></td>
+            <td><label><input type="radio" name="question19" value="B"> 잘 안 한다</label></td>
+        </tr>
+        <tr>
+            <td>기분은</td>
+            <td><label><input type="radio" name="question20" value="A"> 쉽게 초조해한다</label></td>
+            <td><label><input type="radio" name="question20" value="B"> 쉽게 의기소침해진다</label></td>
+        </tr>
+        <tr>
+            <td>만나면 기운이 난다는 말을 듣는다</td>
+            <td><label><input type="radio" name="question21" value="A"> 별로 아니다</label></td>
+            <td><label><input type="radio" name="question21" value="B"> 자주 듣는다</label></td>
+        </tr>
+        <tr>
+            <td>기력</td>
+            <td><label><input type="radio" name="question22" value="A"> 넘친다</label></td>
+            <td><label><input type="radio" name="question22" value="B"> 생기지 않을 때가 많다</label></td>
+        </tr>
+        <tr>
+            <td>집중력</td>
+            <td><label><input type="radio" name="question23" value="A"> 비교적 있다</label></td>
+            <td><label><input type="radio" name="question23" value="B"> 별로 없다</label></td>
+        </tr>
+        <tr>
+            <td>공사 구분</td>
+            <td><label><input type="radio" name="question24" value="A"> 잘 한다</label></td>
+            <td><label><input type="radio" name="question24" value="B"> 못 한다</label></td>
+        </tr>
+        <tr>
+            <td>의지</td>
+            <td><label><input type="radio" name="question25" value="A"> 강하다</label></td>
+            <td><label><input type="radio" name="question25" value="B"> 별로 강하지 않다</label></td>
+        </tr>
+        <tr>
+            <td>인간관계는</td>
+            <td><label><input type="radio" name="question26" value="A"> 문제 있다</label></td>
+            <td><label><input type="radio" name="question26" value="B"> 양호</label></td>
+        </tr>
+        <tr>
+            <td>스트레스가 있으면</td>
+            <td><label><input type="radio" name="question27" value="A"> 쌓아둔다</label></td>
+            <td><label><input type="radio" name="question27" value="B"> 발산한다</label></td>
+        </tr>
+        <!-- 나머지 질문들 추가 -->
+    </table>
+
+    <button onclick="calculateResult()">확인하기</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function calculateResult() {
+    let aCount = 0;
+    let bCount = 0;
+
+    // 각 질문에 대해 A와 B가 몇 개인지 카운트
+    for (let i = 1; i <= 27; i++) {
+        const question = document.getElementsByName('question' + i);
+        for (const radio of question) {
+            if (radio.checked) {
+                if (radio.value === 'A') {
+                    aCount++;
+                } else if (radio.value === 'B') {
+                    bCount++;
+                }
+            }
+        }
+    }
+
+    // 결과 계산
+    let resultText = '';
+    if (aCount >= 0 && aCount <= 7 && bCount >= 20 && bCount <= 27) {
+        resultText = "부교감신경이 우위인 당신은.... 차에 비유하자면 브레이크의 기능이 향상된 상태로 몸의 긴장이 이완돼 있으며 혈압은 저하돼 있어 기분이 온화한 상태이다.";
+    } else if (aCount >= 8 && aCount <= 11 && bCount >= 16 && bCount <= 19) {
+        resultText = "균형이 잘 잡힌 당신은... 능력 발휘를 할 수 있는 가장 좋은 상이다. 그러나 나이와 함께 자율신경은 날로 균형이 깨지게 돼 있다. 좋은 습관들을 익혀 현재의 균형을 유지하도록 하자.";
+    } else if (aCount >= 12 && aCount <= 27 && bCount >= 0 && bCount <= 15) {
+        resultText = "교감신경이 우위인 당신은... 차에 비유하자면 엑셀의 기능이 향상된 상태로 몸은 활동적이다. 혈관이 수축돼 혈압이 상승된 상태이며 적극성을 띤다.";
+    } else {
+        resultText = "모든 리스트에 모두 체크해주세요.";
+    }
+
+    document.getElementById('result').innerText = resultText;
+
+    // A와 B의 합계 표시
+    alert("부교감신경이 우위 : A(0~7) B(20~27)" 
+    + "\n균형 양호 : A(8~11) B(16~19)"
+     + "\n교감신경이 우위 : A(12~27) B(0~15)" 
+     + "\nA: " + aCount 
+     + "\nB: " + bCount);
+
+    // 3초 후 결과 표시
+    setTimeout(function() {
+        document.getElementById('result').innerText = resultText;
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
